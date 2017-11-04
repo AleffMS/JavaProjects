@@ -2,6 +2,7 @@
 package view;
 
 import util.CalcRNA;
+import util.LimiteDigitos;
 
 /**
  *
@@ -11,6 +12,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     public TelaPrincipal() {
         initComponents();
+        limitedig();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -260,4 +263,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField tfp2;
     private javax.swing.JTextField tfp3;
     // End of variables declaration//GEN-END:variables
+
+public void limitedig(){
+    tfe1.setDocument(new LimiteDigitos(1));
+    tfe2.setDocument(new LimiteDigitos(1));
+    tfe3.setDocument(new LimiteDigitos(1));
+    tfp1.setDocument(new LimiteDigitos(1));
+    tfp2.setDocument(new LimiteDigitos(1));
+    tfp3.setDocument(new LimiteDigitos(1));
+    tfVD.setDocument(new LimiteDigitos(1));
 }
+    
+}
+
